@@ -1,0 +1,14 @@
+version: '2'
+services:
+  nginx:
+    image: "nginx:latest"
+    ports:
+      - 10080:80
+
+  database:
+    image: "postgres"
+    restart: always
+    ports:
+      - 15432:5432
+    environment:
+      POSTGRES_PASSWORD: "password"

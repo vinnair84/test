@@ -1,0 +1,6 @@
+---
+- name: Create an empty bucket
+  s3:
+    bucket: test
+    mode: create
+    permission: public-read
